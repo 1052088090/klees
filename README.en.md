@@ -97,16 +97,14 @@ NEXT_PUBLIC_SITE_URL=https://your-domain.com # For sitemap and RSS
 ```bash
 npm run build
 npm start            # or with PM2:
-pm2 start server.js --name my-site
+pm2 start npm --name my-site -- start
 ```
-
-Includes built-in SSE real-time stats (visitor count + online users + uptime) with no external database. Stats persist in `.stats.json` at the project root.
 
 </details>
 
 ## Tech Stack
 
-Next.js 14 · TypeScript · SCSS Modules · CSS @keyframes · Framer Motion · GSAP · Three.js · MDX · Node.js SSE
+Next.js 14 · TypeScript · SCSS Modules · CSS @keyframes · Framer Motion · GSAP · Three.js · MDX
 
 ## Project Structure
 
@@ -123,8 +121,7 @@ Next.js 14 · TypeScript · SCSS Modules · CSS @keyframes · Framer Motion · G
 ├── contexts/           # Global state
 ├── data/               # ← Your content here
 ├── content/blog/       # ← Your blog posts here
-├── styles/             # SCSS stylesheets
-└── server.js           # Custom server (SSE stats)
+└── styles/             # SCSS stylesheets
 ```
 
 ## License

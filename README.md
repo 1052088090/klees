@@ -98,16 +98,14 @@ NEXT_PUBLIC_SITE_URL=https://你的域名   # 用于 sitemap 和 RSS
 ```bash
 npm run build
 npm start          # 或用 PM2：
-pm2 start server.js --name my-site
+pm2 start npm --name my-site -- start
 ```
-
-自带 SSE 实时统计（访客数 + 在线人数 + 运行时长），不需要额外数据库。统计数据持久化在项目根目录的 `.stats.json` 文件中。
 
 </details>
 
 ## 技术栈
 
-Next.js 14 · TypeScript · SCSS Modules · CSS @keyframes · Framer Motion · GSAP · Three.js · MDX · Node.js SSE
+Next.js 14 · TypeScript · SCSS Modules · CSS @keyframes · Framer Motion · GSAP · Three.js · MDX
 
 ## 项目结构
 
@@ -124,8 +122,7 @@ Next.js 14 · TypeScript · SCSS Modules · CSS @keyframes · Framer Motion · G
 ├── contexts/           # 全局状态
 ├── data/               # ← 你的内容在这里
 ├── content/blog/       # ← 你的博客在这里
-├── styles/             # SCSS 样式
-└── server.js           # 自定义服务器（SSE 统计）
+└── styles/             # SCSS 样式
 ```
 
 ## 许可证

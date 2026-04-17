@@ -47,7 +47,6 @@ public/music/*.flac
 public/music/*.mp3
 
 # Stats persistence
-.stats.json
 
 # Deploy
 deploy.log
