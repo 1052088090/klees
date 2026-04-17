@@ -43,8 +43,6 @@ next-env.d.ts
 
 # OS generated files
 Thumbs.db 
-public/music/*.flac
-public/music/*.mp3
 
 # Stats persistence
 
