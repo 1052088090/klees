@@ -31,12 +31,12 @@ export const webProjects: Project[] = [
       '卷宗边角可加入骑士团签章、危险品标签与陪同批示。',
     ],
     link: '#',
-    imageUrl: local('dossier/knight-registration.png'),
+    imageUrl: local('dossier/knight-registration.webp'),
     galleryImages: [
-      { src: local('portraits/klee-half-archive.png'), caption: '角色卷宗半身主图' },
-      { src: local('dossier/knight-registration.png'), caption: '骑士团登记页扫描件' },
-      { src: local('dossier/pyro-clover-emblem.png'), caption: '神之眼与四叶草徽记细节图' },
-      { src: local('dossier/escort-protocol-sheet.png'), caption: '监护与陪同条例页' },
+      { src: local('portraits/klee-half-archive.webp'), caption: '角色卷宗半身主图' },
+      { src: local('dossier/knight-registration.webp'), caption: '骑士团登记页扫描件' },
+      { src: local('dossier/pyro-clover-emblem.webp'), caption: '神之眼与四叶草徽记细节图' },
+      { src: local('dossier/escort-protocol-sheet.webp'), caption: '监护与陪同条例页' },
     ],
     articleContent: `这是一张正式意义上的身份卷宗。它的职责不是讲完可莉的全部，而是先把“她是谁、归属于哪里、为什么必须被认真对待”一次性交代清楚。
 
@@ -71,11 +71,11 @@ export const webProjects: Project[] = [
       '卷宗语气应保持克制，像骑士团在认真记录一个需要照看的孩子。',
     ],
     link: '#',
-    imageUrl: local('dossier/risk-review-summary.png'),
+    imageUrl: local('dossier/risk-review-summary.webp'),
     galleryImages: [
-      { src: local('dossier/risk-review-summary.png'), caption: '风险复核摘要图' },
-      { src: local('dossier/escort-protocol-sheet.png'), caption: '陪同条例便签页' },
-      { src: local('dossier/ancient-dossier-cover.png'), caption: '古旧风观察摘录页' },
+      { src: local('dossier/risk-review-summary.webp'), caption: '风险复核摘要图' },
+      { src: local('dossier/escort-protocol-sheet.webp'), caption: '陪同条例便签页' },
+      { src: local('dossier/ancient-dossier-cover.webp'), caption: '古旧风观察摘录页' },
     ],
     articleContent: `这一条目更像骑士团的长期观察结论。它不解释技能，也不强调火力，而是试图回答一个更重要的问题：该如何理解可莉的行动逻辑。
 
@@ -308,11 +308,11 @@ export const earlyProjects: Project[] = [
       '这一条能把整份卷宗从冷硬记录重新拉回人情味。',
     ],
     link: '#',
-    imageUrl: local('dossier/escort-protocol-sheet.png'),
+    imageUrl: local('dossier/escort-protocol-sheet.webp'),
     galleryImages: [
-      { src: local('dossier/escort-protocol-sheet.png'), caption: '陪同条例备忘录' },
-      { src: local('scenes/confinement-room.png'), caption: '禁闭室记录环境图' },
-      { src: local('relations/jean-card.png'), caption: '代理团长监护卷宗卡面' },
+      { src: local('dossier/escort-protocol-sheet.webp'), caption: '陪同条例备忘录' },
+      { src: local('scenes/confinement-room.webp'), caption: '禁闭室记录环境图' },
+      { src: local('relations/jean-card.webp'), caption: '代理团长监护卷宗卡面' },
     ],
     articleContent: `这一条目适合放“陪同许可、禁闭室记录、监护签字页”等卷宗型素材。它的重点不是再说一次可莉会惹麻烦，而是解释骑士团如何在不压抑她天性的前提下，把危险感控制在可以被照看的范围内。
 
@@ -343,11 +343,11 @@ export const earlyProjects: Project[] = [
       '这是整组附录里最适合做警示贴纸和角标演出的条目。',
     ],
     link: '#',
-    imageUrl: local('props/clover-pyro-device.png'),
+    imageUrl: local('props/clover-pyro-device.webp'),
     galleryImages: [
-      { src: local('dossier/ancient-dossier-cover.png'), caption: '危险品警示公告页' },
-      { src: local('dossier/pyro-vision-single.png'), caption: '爆炸物与徽记结构细节图' },
-      { src: local('scenes/wild-explosion-field.png'), caption: '现场处置与爆破示意图' },
+      { src: local('dossier/ancient-dossier-cover.webp'), caption: '危险品警示公告页' },
+      { src: local('dossier/pyro-vision-single.webp'), caption: '爆炸物与徽记结构细节图' },
+      { src: local('scenes/wild-explosion-field.webp'), caption: '现场处置与爆破示意图' },
     ],
     articleContent: `本条更适合放“爆炸物设定图、警示便签、卷宗边角小素材”。它承担的是附录里的技术警示任务，用来把可莉那些最容易被误判成“很可爱所以没问题”的东西，重新翻译成骑士团能执行的安全语言。
 

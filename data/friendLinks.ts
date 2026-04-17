@@ -14,7 +14,7 @@ export const friendLinksData: FriendLink[] = [
       '大多数禁闭室记录与外出许可均由其签核。',
     ],
     keywords: ['监护', '纪律', '签核'],
-    avatar: '/images/klee/relations/jean-card.png',
+    avatar: '/images/klee/relations/jean-card.webp',
   },
   {
     id: 'albedo',

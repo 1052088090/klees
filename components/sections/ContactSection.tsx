@@ -1,12 +1,12 @@
 import styles from '../../styles/Home.module.scss';
 
 const contacts = [
-  { name: '琴', href: 'https://ys.mihoyo.com/main/character/mondstadt?char=0', img: '/images/characters/jean.png', cls: 'radarContact1' },
-  { name: '温迪', href: 'https://ys.mihoyo.com/main/character/mondstadt?char=7', img: '/images/characters/venti.png', cls: 'radarContact2' },
-  { name: '可莉', href: 'https://ys.mihoyo.com/main/character/mondstadt?char=8', img: '/images/characters/klee.png', cls: 'radarContact3' },
-  { name: '阿贝多', href: 'https://ys.mihoyo.com/main/character/mondstadt?char=15', img: '/images/characters/albedo.png', cls: 'radarContact4' },
-  { name: '杜林', href: 'https://ys.mihoyo.com/main/character/mondstadt?char=21', img: '/images/characters/durin.png', cls: 'radarContact5' },
-  { name: '法尔伽', href: 'https://ys.mihoyo.com/main/character/mondstadt?char=22', img: '/images/characters/varka.png', cls: 'radarContact6' },
+  { name: '琴', href: 'https://ys.mihoyo.com/main/character/mondstadt?char=0', img: '/images/characters/jean.webp', cls: 'radarContact1' },
+  { name: '温迪', href: 'https://ys.mihoyo.com/main/character/mondstadt?char=7', img: '/images/characters/venti.webp', cls: 'radarContact2' },
+  { name: '可莉', href: 'https://ys.mihoyo.com/main/character/mondstadt?char=8', img: '/images/characters/klee.webp', cls: 'radarContact3' },
+  { name: '阿贝多', href: 'https://ys.mihoyo.com/main/character/mondstadt?char=15', img: '/images/characters/albedo.webp', cls: 'radarContact4' },
+  { name: '杜林', href: 'https://ys.mihoyo.com/main/character/mondstadt?char=21', img: '/images/characters/durin.webp', cls: 'radarContact5' },
+  { name: '法尔伽', href: 'https://ys.mihoyo.com/main/character/mondstadt?char=22', img: '/images/characters/varka.webp', cls: 'radarContact6' },
 ];
 
 export default function ContactSection({

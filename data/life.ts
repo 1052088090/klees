@@ -13,13 +13,13 @@ export const gameData: LifeItem[] = [
     summary: '收纳可莉最核心的一组角色视觉，是整套图像卷宗里最先被读取的身份主档。',
     tech: ['立绘', '主视觉', '身份页'],
     link: '#',
-    imageUrl: local('portraits/klee-half-archive.png'),
+    imageUrl: local('portraits/klee-half-archive.webp'),
     articleContent:
       '这条图像卷宗用来收纳可莉最核心的一组角色视觉，包括正式立绘、半身特写和身份页扫描件。它承担的是“第一眼就知道这是可莉”的识别任务，所以建议优先替换为最标准、最稳定的官方素材。\n\n如果后面要继续往下补，最值得先放进去的是全身立绘、服装与背包细节，以及一张更适合做封面的半身特写。这样首页、内容页和详情页之间都能共用同一套主视觉语言。',
     galleryImages: [
-      { src: local('dossier/knight-registration.png'), caption: '骑士团身份卷宗页' },
+      { src: local('dossier/knight-registration.webp'), caption: '骑士团身份卷宗页' },
       { src: archive('Portrait Detail'), caption: '待补：服装与背包细节图' },
-      { src: local('portraits/klee-half-archive.png'), caption: '卷宗半身特写图' },
+      { src: local('portraits/klee-half-archive.webp'), caption: '卷宗半身特写图' },
     ],
     notes: [
       '优先替换为官方立绘、半身特写和身份页扫描件三类核心素材。',
@@ -40,7 +40,7 @@ export const gameData: LifeItem[] = [
       '这一条更适合放节日活动、联动插图和特殊造型相关的画面，让角色视觉不只停留在标准立绘。它负责补足“可莉在不同场合是什么样子”的那部分情绪和氛围。\n\n后续整理时，可以按横幅主视觉、活动剧情卡面和局部服装细节三类来归档。这样既方便补图，也方便后面做活动回顾或图像附录。',
     galleryImages: [
       { src: local('events/event-banner-klee.webp'), caption: '活动横幅主视觉' },
-      { src: local('dossier/ancient-dossier-cover.png'), caption: '档案风活动封面页' },
+      { src: local('dossier/ancient-dossier-cover.webp'), caption: '档案风活动封面页' },
       { src: archive('Festival Card 3'), caption: '待补：活动服装局部图' },
     ],
     notes: [
@@ -80,13 +80,13 @@ export const travelData: LifeItem[] = [
     summary: '补足人物之外的空间信息，让图像卷宗也能讲出可莉活跃在哪些场景里。',
     tech: ['截图', '场景', '冒险记录'],
     link: '#',
-    imageUrl: local('scenes/mondstadt-street.png'),
+    imageUrl: local('scenes/mondstadt-street.webp'),
     articleContent:
       '这组条目负责补足“可莉出现在哪里、那些场景看起来是什么样”的空间感。它适合放剧情截图、日常场景和冒险途中带有环境信息的画面，让图像卷宗不只是人物特写，也有真实的世界背景。\n\n后续如果补图，可以先按蒙德街头、禁闭室和野外冒险三类分组。这样整站后面的故事记录和关系卷宗也更容易互相引用。',
     galleryImages: [
-      { src: local('scenes/mondstadt-street.png'), caption: '蒙德街头场景图' },
-      { src: local('scenes/confinement-room.png'), caption: '禁闭室与观察室场景图' },
-      { src: local('scenes/wild-explosion-field.png'), caption: '野外冒险与爆破现场图' },
+      { src: local('scenes/mondstadt-street.webp'), caption: '蒙德街头场景图' },
+      { src: local('scenes/confinement-room.webp'), caption: '禁闭室与观察室场景图' },
+      { src: local('scenes/wild-explosion-field.webp'), caption: '野外冒险与爆破现场图' },
     ],
     notes: [
       '建议先按蒙德街头、禁闭室和野外冒险三类归档。',
@@ -103,11 +103,11 @@ export const otherData: LifeItem[] = [
     dossierCode: 'KL-IMG-05',
     summary: '收纳所有不承担主叙事、但能显著提升档案袋成品感的边角物料。',
     tech: ['图标', '便签', '装饰素材'],
-    imageUrl: local('props/clover-pyro-device.png'),
+    imageUrl: local('props/clover-pyro-device.webp'),
     articleContent:
       '如果后面要把整站打磨得更像一份被翻阅过的角色档案，这些小素材会非常关键。它们不承担主要叙事，但能把卷宗里的边角、注记、标签和危险提示全部补完整。\n\n推荐优先准备四叶草符号、炸弹图样、手写便签和骑士团印章。等这些素材补齐以后，首页、HUD、详情页和附录备注的统一度会明显提升。',
     galleryImages: [
-      { src: local('dossier/escort-protocol-sheet.png'), caption: '便签与印章组合页' },
+      { src: local('dossier/escort-protocol-sheet.webp'), caption: '便签与印章组合页' },
       { src: local('props/clover-mark.svg'), caption: '四叶草符号与角标素材' },
     ],
     notes: [
