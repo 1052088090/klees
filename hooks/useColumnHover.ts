@@ -3,8 +3,8 @@ import type { ColumnHoverState } from '../types';
 
 export default function useColumnHover(): ColumnHoverState {
   const initialRandomTexts = [
-    'DATA-Ø05',
-    ...Array(5).fill('DATA-Ø??')
+    'FILE-KL',
+    ...Array(5).fill('附录待命')
   ];
   const [randomHudTexts, setRandomHudTexts] = useState(initialRandomTexts);
   const [branchText1, setBranchText1] = useState('');
@@ -20,7 +20,7 @@ export default function useColumnHover(): ColumnHoverState {
     for (let i = 0; i < 6; i++) {
       const randomNum = Math.floor(Math.random() * 99) + 1;
       const numStr = String(randomNum).padStart(2, '0');
-      newTexts.push(`DATA-Ø${numStr}`);
+      newTexts.push(i === 0 ? `FILE-${numStr}` : `附录-${numStr}`);
     }
     setRandomHudTexts(newTexts);
   };

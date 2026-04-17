@@ -49,8 +49,7 @@ const LogoTitle = forwardRef<LogoTitleRef>((_, ref) => {
     <div ref={logoAreaRef} className={styles.logo_area}>
       <div className={styles.title_container}>
         <h1 ref={mainTitleRef} className={styles.main_title}>
-          {/* Replace "YOUR_SITE" with your site name */}
-          {"YOUR_SITE".split("").map((char, index) => (
+          {"KLEE DOSSIER".split("").map((char, index) => (
             <span key={`site-${char}-${index}`} className={styles.char_wrapper}>
               <span className={styles.char_inner}>
                 {char}
@@ -58,7 +57,7 @@ const LogoTitle = forwardRef<LogoTitleRef>((_, ref) => {
             </span>
           ))}
         </h1>
-        <div className={styles.logo_subtitle} style={{ opacity: 0, visibility: 'hidden' }}>OUR DESTINIES ENTWINE AT THIS MOMENT</div>
+        <div className={styles.logo_subtitle} style={{ opacity: 0, visibility: 'hidden' }}>西风骑士团 / 火花骑士封存卷宗</div>
       </div>
     </div>
   );

@@ -144,8 +144,8 @@
   width: 100%;
   height: 100%;
   background-image: 
-    linear-gradient(rgba(9, 22, 40, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(9, 22, 40, 0.15) 1px, transparent 1px);
+    linear-gradient(rgba(86, 42, 24, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(86, 42, 24, 0.18) 1px, transparent 1px);
   background-size: 20px 20px;
   z-index: 1;
   opacity: 0.5;
@@ -160,9 +160,9 @@
     width: 100%;
     height: 100%;
     background-image: 
-      repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(150, 150, 150, 0.03) 20px, rgba(150, 150, 150, 0.03) 21px),
-      repeating-linear-gradient(60deg, transparent, transparent 20px, rgba(150, 150, 150, 0.03) 20px, rgba(150, 150, 150, 0.03) 21px),
-      repeating-linear-gradient(120deg, transparent, transparent 20px, rgba(150, 150, 150, 0.03) 20px, rgba(150, 150, 150, 0.03) 21px);
+      repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(255, 179, 112, 0.04) 20px, rgba(255, 179, 112, 0.04) 21px),
+      repeating-linear-gradient(60deg, transparent, transparent 20px, rgba(255, 179, 112, 0.04) 20px, rgba(255, 179, 112, 0.04) 21px),
+      repeating-linear-gradient(120deg, transparent, transparent 20px, rgba(255, 179, 112, 0.04) 20px, rgba(255, 179, 112, 0.04) 21px);
     opacity: 0.7;
   }
 }
@@ -176,8 +176,9 @@
   height: 220vh;
   background: radial-gradient(
     circle,
-    rgba(255, 255, 255, 0.05) 0%,
-    rgba(200, 200, 200, 0.03) 40%,
+    rgba(255, 183, 112, 0.08) 0%,
+    rgba(255, 111, 69, 0.05) 36%,
+    rgba(255, 214, 166, 0.02) 58%,
     rgba(0, 0, 0, 0) 80%
   );
   transform: translate(-50%, -50%);
@@ -197,8 +198,8 @@
   pointer-events: none;
   background: repeating-linear-gradient(
     to bottom,
-    rgba(200, 200, 200, 0.15),
-    rgba(200, 200, 200, 0.15) 1px,
+    rgba(255, 194, 124, 0.18),
+    rgba(255, 194, 124, 0.18) 1px,
     transparent 1px,
     transparent 4px
   );
@@ -222,7 +223,7 @@
   background: linear-gradient(to bottom, 
     transparent, 
     transparent 49.9%, 
-    rgba(200, 200, 200, 0.1) 50%, 
+    rgba(255, 186, 118, 0.12) 50%, 
     transparent 50.1%, 
     transparent
   );

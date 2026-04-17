@@ -87,6 +87,29 @@
   gap: 8px;
 }
 
+.storyRecordList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.cardTopline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.cardCode {
+  font-family: 'Dosis', monospace;
+  font-size: var(--fs-2xs);
+  color: var(--ark-primary);
+  opacity: 0.8;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
 .cardHeader {
   display: flex;
   align-items: baseline;
@@ -111,7 +134,7 @@
   font-family: 'Dosis', monospace;
   font-size: var(--fs-2xs);
   color: var(--ark-text-secondary);
-  opacity: 0.4;
+  opacity: 0.45;
   letter-spacing: 0.12em;
   white-space: nowrap;
   flex-shrink: 0;
@@ -122,7 +145,7 @@
   font-size: var(--fs-base);
   color: var(--ark-text-secondary);
   line-height: 1.7;
-  opacity: 0.55;
+  opacity: 0.62;
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -148,11 +171,13 @@
 .cardTag {
   font-family: 'Dosis', monospace;
   font-size: var(--fs-2xs);
-  color: var(--ark-text-secondary);
-  opacity: 0.45;
+  color: rgba(255, 215, 182, 0.82);
+  opacity: 0.75;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  padding: 1px 0;
+  padding: 3px 6px;
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.14);
+  background: rgba(var(--ark-primary-rgb), 0.05);
   transition: color 0.3s ease, opacity 0.3s ease;
 
   &::before {
@@ -169,7 +194,7 @@
   font-family: 'Dosis', monospace;
   font-size: var(--fs-2xs);
   color: var(--ark-text-secondary);
-  opacity: 0.3;
+  opacity: 0.45;
   letter-spacing: 0.1em;
   white-space: nowrap;
   flex-shrink: 0;
@@ -210,7 +235,7 @@
   }
 
   .cardTag {
-    color: var(--ark-text-secondary);
+    color: rgba(255, 215, 182, 0.82);
   }
 }
 
@@ -235,6 +260,12 @@
   }
 
   .cardDate {
-    order: -1;
+    order: 0;
+  }
+
+  .cardTopline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
   }
 }

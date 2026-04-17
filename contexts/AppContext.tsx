@@ -1,7 +1,6 @@
 import { createContext, useContext, useMemo, type ReactNode } from 'react';
 import useAnimationSequence from '../hooks/useAnimationSequence';
 import usePowerSystem from '../hooks/usePowerSystem';
-import useRealtimeStats from '../hooks/useRealtimeStats';
 import useColumnHover from '../hooks/useColumnHover';
 import { useFateTypingEffect, useEnvParamsTypingEffect } from '../hooks/useTypingEffect';
 import type { AppContextValue } from '../types';
@@ -28,9 +27,6 @@ export function AppProvider({ children }: AppProviderProps) {
     deactivateTesseract,
   } = power;
 
-  const stats = useRealtimeStats();
-  const { currentTime, runtime, totalVisits, currentVisitors } = stats;
-
   const { displayedFateText, isFateTypingActive } = useFateTypingEffect(textVisible);
   const { displayedEnvParams, isEnvParamsTyping, envData, envDataVersion } = useEnvParamsTypingEffect(textVisible);
 
@@ -49,8 +45,6 @@ export function AppProvider({ children }: AppProviderProps) {
     // Power
     powerLevel, isInverted, isTesseractActivated, isDischarging,
     chargeBattery, handleDischargeLeverPull, handleActivateTesseract, deactivateTesseract,
-    // Stats
-    currentTime, runtime, totalVisits, currentVisitors,
     // Typing
     displayedFateText, isFateTypingActive,
     displayedEnvParams, isEnvParamsTyping, envData, envDataVersion,
@@ -64,7 +58,6 @@ export function AppProvider({ children }: AppProviderProps) {
     columnPhase, retractColumns, expandColumns,
     powerLevel, isInverted, isTesseractActivated, isDischarging,
     chargeBattery, handleDischargeLeverPull, handleActivateTesseract, deactivateTesseract,
-    currentTime, runtime, totalVisits, currentVisitors,
     displayedFateText, isFateTypingActive,
     displayedEnvParams, isEnvParamsTyping, envData, envDataVersion,
     randomHudTexts, branchText1, branchText2, branchText3, branchText4,

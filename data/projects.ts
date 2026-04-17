@@ -1,79 +1,361 @@
 import type { Project } from '../types';
 
+const cover = (label: string) =>
+  `https://placehold.co/960x540/f7d7a8/6f2d14?text=${encodeURIComponent(label)}`;
+const local = (path: string) => `/images/klee/${path}`;
+
 // ============================================================
-// Web / Frontend Projects — Replace with your own!
+// 基础档案 / 角色概览
 // ============================================================
 export const webProjects: Project[] = [
   {
     id: 1,
-    title: 'Portfolio Website',
-    description: 'A HUD-themed personal portfolio built with Next.js',
-    role: 'Design & Development',
-    year: '2025',
+    title: '档案摘要',
+    description: '西风骑士团登记在册的火花骑士基础资料与身份标签，负责定义这份卷宗的正式身份页。',
+    role: '基础卷宗',
+    year: 'Pyro',
+    dossierCode: 'KL-BASE-01',
     status: 'shipped',
-    tech: ['UI/UX', 'Full Stack', 'DevOps'],
+    summary: '把可莉的身份、所属、元素属性与监护等级压缩成一页可快速扫描的基础卷宗，是整站最先被读取的封面记录。',
+    tech: ['蒙德', '火元素', '法器', '火花骑士'],
     highlights: [
-      'Sci-fi HUD aesthetic',
-      '42 custom CSS animations',
+      '代号登记：KLEE / 可莉',
+      '所属记录：西风骑士团',
+      '核心特征：高热情、高机动、爆破倾向明显',
+      '监护判断：需陪同观察，不建议长时间单独外出',
+      '档案定位：整份卷宗的身份锚点与后续索引入口',
+    ],
+    notes: [
+      '适合搭配正式立绘、登记页扫描与神之眼局部图。',
+      '这一页的任务是“先让人记住她是谁”，而不是直接进入战斗细节。',
+      '卷宗边角可加入骑士团签章、危险品标签与陪同批示。',
     ],
     link: '#',
-    liveUrl: 'https://example.com',
-    imageUrl: 'https://placehold.co/800x450/0d0d0d/b2f2bb?text=Project+1',
+    imageUrl: local('dossier/knight-registration.png'),
     galleryImages: [
-      { src: 'https://placehold.co/800x450/0d0d0d/b2f2bb?text=Screenshot+1' },
-      { src: 'https://placehold.co/800x450/0d0d0d/b2f2bb?text=Screenshot+2' },
+      { src: local('portraits/klee-half-archive.png'), caption: '角色卷宗半身主图' },
+      { src: local('dossier/knight-registration.png'), caption: '骑士团登记页扫描件' },
+      { src: local('dossier/pyro-clover-emblem.png'), caption: '神之眼与四叶草徽记细节图' },
+      { src: local('dossier/escort-protocol-sheet.png'), caption: '监护与陪同条例页' },
     ],
-    articleContent: `This is your portfolio website. Replace this text with a description of your project.
+    articleContent: `这是一张正式意义上的身份卷宗。它的职责不是讲完可莉的全部，而是先把“她是谁、归属于哪里、为什么必须被认真对待”一次性交代清楚。
 
-You can include links, markdown-style formatting, and multiple paragraphs to describe your work.`,
+可莉是西风骑士团正式登记的火花骑士，也是蒙德城里最需要被陪同观察的高活跃个体之一。本条卷宗建议放置“角色立绘、身份页、徽章细节”三类核心素材，作为整站的基础档案入口。
+
+她的行为模式充满童趣、热情与冲劲，但一旦与炸弹、蹦蹦或任何可燃想法结合，现场秩序通常会迅速失控。
+
+卷宗结论并不认为她“危险”，而是认为她“必须被温柔但坚定地引导”。在绝大多数记录里，可莉造成的问题并非出于恶意，而是出于把开心和爆炸划上等号。
+
+也正因为如此，这一页通常会在最后补上一句非常关键的批注：她是骑士团需要照看的孩子，也是蒙德最明亮的一团火花。`,
   },
   {
     id: 2,
-    title: 'Example Project',
-    description: 'A sample project to demonstrate the template structure',
-    role: 'Frontend Developer',
-    year: '2025',
-    status: 'shipped',
-    tech: ['React', 'TypeScript'],
+    title: '观察结论',
+    description: '关于可莉性格、日常活动与风险等级的长期观察摘要，负责给整份卷宗补上“如何理解她”的结论页。',
+    role: '观察记录',
+    year: 'Escort',
+    dossierCode: 'KL-BASE-02',
+    status: 'wip',
+    summary: '从长期陪同、违纪记录和日常互动中整理出的行为画像，用来解释为什么可莉既让人头疼，又总会被温柔接住。',
+    tech: ['童趣', '高能量', '依赖陪同', '爆破许可'],
     highlights: [
-      'Responsive design',
-      'Dark mode support',
+      '与陌生环境接触时保持好奇，探索欲极强',
+      '情绪表达直接，快乐与歉意都极易写在脸上',
+      '在被禁止单独行动时，违纪概率会随时间上升',
+      '对信任对象依赖明显，提醒与安抚都会直接影响判断',
+      '安全边界一旦被清楚说明，通常会愿意配合并记住',
+    ],
+    notes: [
+      '适合配风险评级图、陪同条例便签和日常观察摘录。',
+      '这一页更偏心理与行为理解，不需要堆叠战斗术语。',
+      '卷宗语气应保持克制，像骑士团在认真记录一个需要照看的孩子。',
     ],
     link: '#',
-    liveUrl: 'https://example.com',
-    imageUrl: 'https://placehold.co/800x450/0d0d0d/b2f2bb?text=Project+2',
+    imageUrl: local('dossier/risk-review-summary.png'),
     galleryImages: [
-      { src: 'https://placehold.co/800x450/0d0d0d/b2f2bb?text=Gallery+1' },
+      { src: local('dossier/risk-review-summary.png'), caption: '风险复核摘要图' },
+      { src: local('dossier/escort-protocol-sheet.png'), caption: '陪同条例便签页' },
+      { src: local('dossier/ancient-dossier-cover.png'), caption: '古旧风观察摘录页' },
     ],
-    articleContent: `Describe what makes this project special.
+    articleContent: `这一条目更像骑士团的长期观察结论。它不解释技能，也不强调火力，而是试图回答一个更重要的问题：该如何理解可莉的行动逻辑。
 
-Add screenshots, links, and technical details.`,
+这一页适合放置“风险评级、观察摘要、监护建议”类文案与配图。它承担的是角色气质判断，而不是战斗数值说明。
+
+从性格层面判断，可莉并非“无视规则”，而是常常先想到“这一定会很好玩”，随后才想起规则本身。
+
+她对信任对象依赖明显，尤其会把监护人的提醒当作最终判定。因此，卷宗里反复出现的稳定建议只有一条：不要单独让她和爆炸物待在一起太久。
+
+当可莉处于安全、被理解、且拥有明确活动范围的状态时，她会呈现出极高的亲和力与感染力，也是整个骑士团里最容易把气氛点亮的人。
+
+所以这份观察记录的最后，往往不会落在“限制”二字上，而会落在“陪同、引导、理解她的快乐方式”上。`,
   },
 ];
 
 // ============================================================
-// Game / Creative Projects — Replace with your own!
+// 命座节点
 // ============================================================
-export const gameProjects: Project[] = [];
+export const gameProjects: Project[] = [
+  {
+    id: 101,
+    title: '命座 I',
+    description: '首层命座记录，允许额外火花在攻击节奏中插入，像是把可莉的开心进一步点燃。',
+    role: '命座节点',
+    year: 'C1',
+    dossierCode: 'KL-CNST-01',
+    status: 'shipped',
+    summary: '第一节点的意义不在于单次倍率，而在于它把可莉的爆炸直觉正式写入了连锁反应里。',
+    tech: ['节点开启', '连锁引爆', '火花追加'],
+    highlights: [
+      '更容易在连续攻击中插入额外火花回应',
+      '让普通攻击与重击之间的节拍更紧密',
+      '属于“快乐会自己继续滚下去”的起始节点',
+    ],
+    notes: [
+      '适合在卷宗里作为“命座解封的第一份证据”展示。',
+      '战斗感受会先于数值印象被察觉。',
+    ],
+    link: '#',
+    imageUrl: cover('Constellation I'),
+    galleryImages: [
+      { src: cover('Node I'), caption: '命座节点图一' },
+      { src: cover('Spark Route'), caption: '火花轨迹与追加触发示意图' },
+    ],
+    articleContent: `第一层节点更像一份“火花会继续说话”的批准书。它不会改变可莉的本性，却会让她原本就连绵的爆炸节奏显得更自然、更难打断。
+
+从卷宗视角看，这一节点标志着可莉的攻击已经不再只是抛投与命中，而是开始具备额外火花插入的连锁倾向。观察员通常会把它记作“战场开始自动接住她的开心”。
+
+如果把命之座当作一条逐渐解封的危险许可，那么第一节点就是那道最轻、却最难回头的门。`,
+  },
+  {
+    id: 102,
+    title: '命座 II',
+    description: '第二节点会让蹦蹦炸弹后的压制更加明确，敌人更容易在爆炸余波里暴露破绽。',
+    role: '命座节点',
+    year: 'C2',
+    dossierCode: 'KL-CNST-02',
+    status: 'shipped',
+    summary: '它把“可爱炸弹”正式推进成了“具备压制与削弱效果的危险品”。',
+    tech: ['破防', '压制', '战技延伸'],
+    highlights: [
+      '蹦蹦炸弹留下的威胁不再只是伤害本身',
+      '敌方在余波中更容易进入脆弱窗口',
+      '战技从“玩闹感”变成真正的战场控制工具',
+    ],
+    notes: [
+      '这一层非常适合配战技图标和诡雷示意页。',
+      '节点价值主要体现在实战控制感，而非静态面板文本。',
+    ],
+    link: '#',
+    imageUrl: cover('Constellation II'),
+    galleryImages: [
+      { src: cover('Node II'), caption: '命座节点图二' },
+      { src: cover('Bomb Pressure'), caption: '蹦蹦炸弹压制范围图' },
+    ],
+    articleContent: `第二层节点最鲜明的变化，是它让蹦蹦炸弹不再只是“会跳的炸弹”，而成为真正能改写敌人状态的战场装置。
+
+对可莉来说，这种变化几乎不会影响她的表情，她依旧会把炸弹抛得像游戏一样轻松；可对观察员而言，这一层开始意味着“误判她的输出环境，会付出更明显代价”。
+
+它让蹦蹦炸弹之后的余波，第一次具备了明确的战术价值。`,
+  },
+  {
+    id: 103,
+    title: '命座 III',
+    description: '第三节点直接抬高战技层级，让蹦蹦炸弹的瞬时爆破更像一份正式批复过的高危许可。',
+    role: '命座节点',
+    year: 'C3',
+    dossierCode: 'KL-CNST-03',
+    status: 'shipped',
+    summary: '这是第一道明显偏向数值放大的节点，也是在卷宗里最容易被标红的一层。',
+    tech: ['战技强化', '高爆发', '瞬时输出'],
+    highlights: [
+      '直接抬升元素战技的火力高度',
+      '使速攻与先手开场更具威慑感',
+      '和前两层叠加后，蹦蹦炸弹开始具备“先手定局”味道',
+    ],
+    notes: [
+      '适合以“高危等级提升”语气呈现。',
+      '这一层会让技能读感明显更偏向爆破许可升级。',
+    ],
+    link: '#',
+    imageUrl: cover('Constellation III'),
+    galleryImages: [
+      { src: cover('Node III'), caption: '命座节点图三' },
+      { src: cover('Blast Permit'), caption: '高危爆破许可章记' },
+    ],
+    articleContent: `第三层节点是命之座从“行为变化”迈向“火力提升”的分界点。可莉依旧还是那个会笑着喊出蹦蹦炸弹的孩子，但卷宗已经开始认真把这份快乐当成需要监管的爆破级别。
+
+如果前两层更像在调整节奏与破绽，那么第三层就是非常直接的强度确认。它写得相当坦率：战技本身会更强，而这件事需要被明确记录。
+
+也因此，这一节点在卷宗里通常会被盖上更醒目的风险章。`,
+  },
+  {
+    id: 104,
+    title: '命座 IV',
+    description: '第四节点让退场也带着爆炸余震，可莉离开后，战场仍可能继续替她说话。',
+    role: '命座节点',
+    year: 'C4',
+    dossierCode: 'KL-CNST-04',
+    status: 'shipped',
+    summary: '这一层最迷人的地方，是把“结束动作”也变成了命座效果的一部分。',
+    tech: ['退场爆破', '余震', '离场威胁'],
+    highlights: [
+      '撤离与切换时会留下额外的爆炸反馈',
+      '把站场结束延长成余震段落',
+      '使敌人很难通过简单拉开距离来判断安全',
+    ],
+    notes: [
+      '卷宗里非常适合写成“离场不等于解除警报”。',
+      '视觉上建议搭配退场火花残留与警示封条。',
+    ],
+    link: '#',
+    imageUrl: cover('Constellation IV'),
+    galleryImages: [
+      { src: cover('Node IV'), caption: '命座节点图四' },
+      { src: cover('Aftershock'), caption: '离场余震记录图' },
+    ],
+    articleContent: `第四层节点把一种很可莉式的感觉正式写进了规则里：她人已经走开了，但开心留下来的爆炸还没结束。
+
+这一层会让观察员特别难以用传统的“站场结束”来判断危险解除，因为她的动作结束，与火花回应结束，并不是同一时刻。
+
+它让命之座第一次具备了真正的“余震美学”，也让整份卷宗的危险感往后跨了一步。`,
+  },
+  {
+    id: 105,
+    title: '命座 V',
+    description: '第五节点提升轰轰火花层级，让爆发覆盖更完整，战场安全边界被进一步挤压。',
+    role: '命座节点',
+    year: 'C5',
+    dossierCode: 'KL-CNST-05',
+    status: 'shipped',
+    summary: '它把轰轰火花推进到更接近“持续轰炸许可”的地步。',
+    tech: ['爆发强化', '持续压制', '范围覆盖'],
+    highlights: [
+      '元素爆发得到直接层级提升',
+      '追击火花的压场感更明显',
+      '整段爆发期的敌方走位空间进一步收缩',
+    ],
+    notes: [
+      '非常适合配“覆盖强度升级”的技术批注。',
+      '节点价值体现在整段爆发期间的控制感放大。',
+    ],
+    link: '#',
+    imageUrl: cover('Constellation V'),
+    galleryImages: [
+      { src: cover('Node V'), caption: '命座节点图五' },
+      { src: cover('Spark Barrage'), caption: '轰轰火花覆盖记录图' },
+    ],
+    articleContent: `第五层节点很像为轰轰火花重新签发了一次许可。它不再只是“爆发会更强”这么简单，而是意味着整个爆发段的压场体验被整体抬高。
+
+对敌人来说，这通常代表更少的喘息空档；对队友来说，则意味着更需要围绕可莉此刻制造出来的高压区域来重新排布动作。
+
+从卷宗角度看，这一节点是“持续轰炸”这一判断被正式写下来的地方。`,
+  },
+  {
+    id: 106,
+    title: '命座 VI',
+    description: '终层节点让可莉不仅自己点亮战场，也开始为整个队伍提供更完整的火花共振。',
+    role: '命座节点',
+    year: 'C6',
+    dossierCode: 'KL-CNST-06',
+    status: 'shipped',
+    summary: '最后一层不是单纯再加一把火，而是把她的快乐正式扩散成团队层面的火花效应。',
+    tech: ['终层节点', '队伍增益', '火花共振'],
+    highlights: [
+      '可莉的火花开始具备更完整的团队外溢价值',
+      '把个人爆破体验扩展成全队层面的节拍器',
+      '也是整份命座卷宗最像“完全解封”的节点',
+    ],
+    notes: [
+      '适合写成“火花骑士快乐外溢”式的终章语气。',
+      '最终层更强调共振，而不是单点伤害印象。',
+    ],
+    link: '#',
+    imageUrl: cover('Constellation VI'),
+    galleryImages: [
+      { src: cover('Node VI'), caption: '命座节点图六' },
+      { src: cover('Team Spark'), caption: '团队火花共振图' },
+    ],
+    articleContent: `第六层节点是整份命座卷宗真正的终章。它让可莉不再只是一位火力强度极高的火花骑士，而是开始把自己的节奏与快乐扩散给整个队伍。
+
+卷宗会在这里明显收起前几层那种“单点危险上升”的写法，转而强调她作为团队节拍器的价值。因为走到这里，命之座已经不再只是一个人的强化清单，而是一种更完整的火花共振结构。
+
+如果要给整组节点写一句结束语，那通常会是：到这一步，火花已经学会照亮别人。`,
+  },
+];
 
 // ============================================================
-// Early / Learning Projects
+// 监护与补充记录
 // ============================================================
 export const earlyProjects: Project[] = [
   {
-    id: 3,
-    title: 'Learning Project',
-    description: 'A project from your early learning journey',
-    role: 'Student',
-    year: '2023',
+    id: 201,
+    title: '监护记录',
+    description: '关于陪同、禁闭室、口头教育与爆破许可的补充说明。',
+    role: '附录条目',
+    year: 'Escort',
+    dossierCode: 'KL-APPX-01',
     status: 'archived',
-    tech: ['HTML', 'CSS'],
-    link: '#',
-    imageUrl: 'https://placehold.co/800x450/0d0d0d/b2f2bb?text=Early+Project',
-    galleryImages: [
-      { src: 'https://placehold.co/800x450/0d0d0d/b2f2bb?text=Learning' },
+    summary: '收录骑士团如何为可莉划定安全边界，以及这些边界背后的温柔处理方式。',
+    tech: ['琴团长', '陪同规则', '禁闭室'],
+    highlights: [
+      '陪同原则不是单纯限制，而是尽量确保她在安全范围内开心行动',
+      '禁闭室记录更多是提醒与教育，不是惩罚式归档',
+      '骑士团对她的处理逻辑始终带着保护性质',
     ],
-    articleContent: `Share your learning journey here.`,
+    notes: [
+      '适合搭配陪同许可、签名页和禁闭室记录单。',
+      '建议以“制度如何照顾一个危险但善良的孩子”来写这页。',
+      '这一条能把整份卷宗从冷硬记录重新拉回人情味。',
+    ],
+    link: '#',
+    imageUrl: local('dossier/escort-protocol-sheet.png'),
+    galleryImages: [
+      { src: local('dossier/escort-protocol-sheet.png'), caption: '陪同条例备忘录' },
+      { src: local('scenes/confinement-room.png'), caption: '禁闭室记录环境图' },
+      { src: local('relations/jean-card.png'), caption: '代理团长监护卷宗卡面' },
+    ],
+    articleContent: `这一条目适合放“陪同许可、禁闭室记录、监护签字页”等卷宗型素材。它的重点不是再说一次可莉会惹麻烦，而是解释骑士团如何在不压抑她天性的前提下，把危险感控制在可以被照看的范围内。
+
+西风骑士团对可莉的管理原则不是压抑，而是引导。比起“禁止”，卷宗里更常出现的是“陪同”“说明缘由”“重新划定边界”这些词。
+
+当她造成问题时，最常见的纠正方式不是严厉斥责，而是重新划定安全边界，并确保她理解“为什么这次不行”。
+
+因此，这份监护记录在卷宗体系里的意义，是给前面的身份页和后面的危险品备注之间加上一道非常关键的人物解释层：她被管理，不是因为她坏，而是因为所有人都知道她值得被好好照看。`,
+  },
+  {
+    id: 202,
+    title: '危险品备注',
+    description: '与蹦蹦炸弹、诡雷和即兴点子相关的现场处置备忘。',
+    role: '附录条目',
+    year: 'Alert',
+    dossierCode: 'KL-APPX-02',
+    status: 'archived',
+    summary: '集中整理蹦蹦炸弹、诡雷和临时爆破灵感的处置原则，是整份卷宗里最像安全手册的一页。',
+    tech: ['蹦蹦炸弹', '诡雷', '现场处置'],
+    highlights: [
+      '来源不明、外形可爱的发光爆炸物应视为高风险可疑目标',
+      '现场第一原则始终是疏散与确认可莉当前位置',
+      '任何拆解、试投或好奇触碰都不属于允许行为',
+    ],
+    notes: [
+      '适合配爆炸物结构草图、警示公告与现场便签。',
+      '文案上可以更偏“骑士团内部应急手册”口吻。',
+      '这是整组附录里最适合做警示贴纸和角标演出的条目。',
+    ],
+    link: '#',
+    imageUrl: local('props/clover-pyro-device.png'),
+    galleryImages: [
+      { src: local('dossier/ancient-dossier-cover.png'), caption: '危险品警示公告页' },
+      { src: local('dossier/pyro-vision-single.png'), caption: '爆炸物与徽记结构细节图' },
+      { src: local('scenes/wild-explosion-field.png'), caption: '现场处置与爆破示意图' },
+    ],
+    articleContent: `本条更适合放“爆炸物设定图、警示便签、卷宗边角小素材”。它承担的是附录里的技术警示任务，用来把可莉那些最容易被误判成“很可爱所以没问题”的东西，重新翻译成骑士团能执行的安全语言。
+
+若在蒙德郊外发现来源不明、造型可爱但正在发光的爆炸物，请不要擅自拆解。越是外表像玩具，越应该优先视为危险品。
+
+正确处置顺序通常是：确认周边无人、联系骑士团、确认可莉此刻人在不在附近。
+
+从卷宗编排上说，这一页会把整组基础档案的最后一个问号补上：如果那些“开心的爆炸灵感”真的落进现实，现场该怎么办。`,
   },
 ];
 

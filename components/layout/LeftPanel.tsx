@@ -59,7 +59,7 @@ export default function LeftPanel({
     <button
       className={`${styles.globalBackButton} ${showBackAndNav ? styles.visible : ''}`}
       onClick={handleGlobalBackClick}
-      data-cursor-label="BACK"
+      data-cursor-label="返回"
     >
     </button>
       <div className={`${styles.globalBackButtonDivider} ${showBackAndNav ? styles.visible : ''}`}></div>
@@ -77,7 +77,7 @@ export default function LeftPanel({
           className={styles.leftNavLink}
           onClick={handleFriendsClick}
         >
-          Friends
+          关联角色
         </button>
       </div>
       <div className={styles.powerDisplay}>
@@ -95,7 +95,6 @@ export default function LeftPanel({
         </div>
         <span className={styles.powerText}>{powerLevel}%</span>
       </div>
-      <div className={styles.logoContainer}></div>
       <div className={`${styles.fateTextContainer} ${isFateTypingActive ? styles.typingActive : ''}`}>
         <span className={styles.fateText}>{displayedFateText}</span>
         <div className={styles.fateLine}></div>

@@ -16,6 +16,13 @@
   -ms-user-select: none;
 }
 
+.sectionCode {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
 // 显示/隐藏状态控制
 .visible {
   pointer-events: auto;
@@ -75,10 +82,6 @@
     &::before {
       animation: fadeInCorner 0.8s ease-out 0.6s forwards;
     }
-    .logoContainer {
-      animation: revealLogo 1.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-      animation-delay: 0.1s;
-    }
   }
 
   // 边框装饰
@@ -114,25 +117,6 @@
 
 
 // LOGO容器
-.logoContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-image: url('/avatar.svg'); // Replace with your own avatar/logo image
-  background-position: 47% 48%;
-  background-repeat: no-repeat;
-  background-size: 57%;
-  filter: grayscale(100%) brightness(0.8) drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
-  pointer-events: none;
-  position: relative;
-  z-index: 3;
-  clip-path: inset(45% 45% 45% 45%);
-  opacity: 0;
-}
-
-
 // 右侧面板
 .rightPanel {
   position: absolute;
@@ -168,6 +152,7 @@
     gap: 6px;
   }
 }
+
 
 
 
@@ -517,10 +502,6 @@
 
 // --- 新增: 倒置状态下的心电图波形为粉色 --- 
 .inverted {
-
-  .logoContainer {
-    filter: grayscale(100%) brightness(0.3) drop-shadow(0 0 5px rgba(0, 0, 0, 0.15));
-  }
 
   .backButton {
      background: #ffffff;
@@ -999,11 +980,6 @@
     pointer-events: auto !important;
   }
 
-  // Logo: 在抽屉中隐藏（太占空间）
-  .logoContainer {
-    display: none;
-  }
-
   // 座右铭文字: 流式布局
   .fateTextContainer {
     position: relative;
@@ -1100,8 +1076,7 @@
   .fateTextContainer,
   .envParamsContainer,
   .brailleText,
-  .gradientLine,
-  .logoContainer {
+  .gradientLine {
     display: none !important;
   }
 

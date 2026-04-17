@@ -27,6 +27,11 @@ export function getPostBySlug(slug: string) {
     excerpt: data.excerpt || '',
     tags: data.tags || [],
     readingTime: stats.text,
+    dossierCode: data.dossierCode || `KL-STORY-${slug.toUpperCase()}`,
+    recordType: data.recordType || '故事卷宗',
+    relation: data.relation || '角色记录',
+    summary: data.summary || data.excerpt || '',
+    notes: Array.isArray(data.notes) ? data.notes : [],
   };
 
   return { meta, content };

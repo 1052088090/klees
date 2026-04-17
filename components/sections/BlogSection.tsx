@@ -1,6 +1,6 @@
 import { type RefObject } from 'react';
 import styles from '../../styles/Home.module.scss';
-import cardStyles from '../../styles/BlogPostCard.module.scss';
+import StoryRecordList from '../blog/StoryRecordList';
 import type { BlogPostMeta } from '../../types';
 
 interface BlogSectionProps {
@@ -16,45 +16,13 @@ export default function BlogSection({
 }: BlogSectionProps) {
   return (
     <div ref={blogSectionRef} className={styles.contentSection}>
-      <h2>Blog</h2>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', width: '100%', marginTop: '20px' }}>
-        {posts.map((post, i) => (
-          <div
-            key={post.slug}
-            className={cardStyles.card}
-            role="link"
-            tabIndex={0}
-            data-cursor-no-magnetic
-            onClick={() => handleBlogItemClick(post.slug)}
-            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') handleBlogItemClick(post.slug); }}
-          >
-            <div className={cardStyles.cardInner}>
-              <span className={cardStyles.cardIndex}>
-                {String(i + 1).padStart(2, '0')}
-              </span>
-              <div className={cardStyles.cardContent}>
-                <div className={cardStyles.cardHeader}>
-                  <h4 className={cardStyles.cardTitle}>{post.title}</h4>
-                  {post.date && <span className={cardStyles.cardDate}>{post.date}</span>}
-                </div>
-                <p className={cardStyles.cardExcerpt}>{post.excerpt}</p>
-                <div className={cardStyles.cardFooter}>
-                  {post.tags.length > 0 ? (
-                    <div className={cardStyles.cardTags}>
-                      {post.tags.map((tag) => (
-                        <span key={tag} className={cardStyles.cardTag}>{tag}</span>
-                      ))}
-                    </div>
-                  ) : <span />}
-                  {post.readingTime && (
-                    <span className={cardStyles.cardReadingTime}>{post.readingTime}</span>
-                  )}
-                </div>
-              </div>
-              <span className={cardStyles.cardArrow}>→</span>
-            </div>
-          </div>
-        ))}
+      <h2>故事记录</h2>
+      <div className={styles.sectionLead}>
+        <span className={styles.sectionCode}>卷宗-003 // 故事记录</span>
+        <p className={styles.sectionSummary}>收录角色故事、语音摘录与卷宗旁注，用来补足火花骑士的情感面貌。</p>
+      </div>
+      <div style={{ width: '100%', marginTop: '20px' }}>
+        <StoryRecordList posts={posts} onOpen={handleBlogItemClick} />
       </div>
     </div>
   );

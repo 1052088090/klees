@@ -16,13 +16,11 @@ const NextIcon = () => <svg viewBox="0 0 10 10" width="10" height="10">
   <rect x="7" y="2" width="1" height="6" fill="currentColor" />
 </svg>;
 
-// Playlist — Replace with your own music files!
-// Place audio files in public/music/ or use external URLs.
 const playlist = [
   {
-    title: "Your Song Title",
-    artist: "Artist Name",
-    src: "/music/example.mp3"
+    title: "Let's Go, Crimson Knight! 真红骑士，出发！",
+    artist: "可莉档案终端",
+    src: "/music/crimson-knight.mp3"
   },
 ];
 

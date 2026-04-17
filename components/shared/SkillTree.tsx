@@ -156,7 +156,7 @@ export default function SkillTree({ categories, expanded }: SkillTreeProps) {
             </div>
           ) : (
             <div className={s.infoEmpty}>
-              <span>HOVER TO INSPECT</span>
+              <span>悬停以检视</span>
             </div>
           )}
         </div>

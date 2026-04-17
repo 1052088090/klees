@@ -37,7 +37,7 @@ export default function MainLayout({ children }) {
   const {
     mainVisible, isInverted, isTesseractActivated, animationsComplete,
     chargeBattery, handleLoadingComplete,
-    currentTime, hudVisible, leftPanelAnimated, leversVisible,
+    hudVisible, leftPanelAnimated, leversVisible,
     handleActivateTesseract, handleDischargeLeverPull, isDischarging,
     powerLevel, isFateTypingActive, displayedFateText,
     isEnvParamsTyping, displayedEnvParams, envData, envDataVersion,
@@ -128,12 +128,12 @@ export default function MainLayout({ children }) {
   }, []);
 
   const navLinks = [
-    { label: 'Portfolio', hash: 'works' },
-    { label: 'Experience', hash: 'experience' },
-    { label: 'Blog', hash: 'blog' },
-    { label: 'Life', hash: 'life' },
-    { label: 'Contact', hash: 'contact' },
-    { label: 'About', hash: 'about' },
+    { label: '基础档案', hash: 'works' },
+    { label: '作战天赋', hash: 'experience' },
+    { label: '故事记录', hash: 'blog' },
+    { label: '图像档案', hash: 'life' },
+    { label: '附录备注', hash: 'contact' },
+    { label: '终页摘要', hash: 'about' },
   ];
 
   const handleLeftNavLinkClick = (link: { label: string; hash: string }) => {
@@ -205,7 +205,7 @@ export default function MainLayout({ children }) {
 
       {mainVisible && (
         <>
-          <GlobalHud currentTime={currentTime} hudVisible={hudVisible || isStandalone} isGamePage={router.pathname === '/game'} />
+          <GlobalHud hudVisible={hudVisible || isStandalone} isGamePage={router.pathname === '/game'} />
           <LeftPanel
             leftPanelAnimated={localPanelAnimated}
             mainVisible={mainVisible}

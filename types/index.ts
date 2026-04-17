@@ -28,6 +28,9 @@ export interface Project {
   isConfidential?: boolean;
   noHero?: boolean;
   invertedImageUrl?: string;
+  dossierCode?: string;
+  summary?: string;
+  notes?: string[];
 }
 
 export interface LifeItemLink {
@@ -46,6 +49,9 @@ export interface LifeItem {
   galleryImages: GalleryImage[];
   articleContent?: string;
   links?: LifeItemLink[];
+  dossierCode?: string;
+  summary?: string;
+  notes?: string[];
 }
 
 export interface ExperienceItem {
@@ -57,6 +63,10 @@ export interface ExperienceItem {
   details: string[];
   alignment: 'left' | 'right';
   galleryImages: GalleryImage[];
+  summary?: string;
+  category?: string;
+  notes?: string[];
+  keywords?: string[];
 }
 
 export interface BlogPost {
@@ -73,14 +83,25 @@ export interface BlogPostMeta {
   excerpt: string;
   tags: string[];
   readingTime: string;
+  dossierCode?: string;
+  recordType?: string;
+  relation?: string;
+  summary?: string;
+  notes?: string[];
 }
 
 export interface FriendLink {
   id: string;
   name: string;
   description: string;
-  url: string;
+  url?: string;
   avatar: string;
+  dossierCode?: string;
+  relation?: string;
+  role?: string;
+  status?: string;
+  notes?: string[];
+  keywords?: string[];
 }
 
 export interface Skill {
@@ -131,13 +152,6 @@ export interface PowerSystemState {
   deactivateTesseract: () => void;
 }
 
-export interface RealtimeStatsState {
-  currentTime: string;
-  runtime: string;
-  totalVisits: number | string;
-  currentVisitors: number;
-}
-
 export interface FateTypingState {
   displayedFateText: string;
   isFateTypingActive: boolean;
@@ -175,7 +189,6 @@ export interface ColumnHoverState {
 export interface AppContextValue
   extends AnimationSequenceState,
     PowerSystemState,
-    RealtimeStatsState,
     FateTypingState,
     EnvParamsTypingState,
     ColumnHoverState {}

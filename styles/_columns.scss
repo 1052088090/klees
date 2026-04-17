@@ -1095,36 +1095,6 @@
     flex-shrink: 0;
   }
 
-  .mobilePanelLogo {
-    width: 100%;
-    flex: 1 1 auto;
-    min-height: 0;
-    background-image: url('/avatar.svg'); // Replace with your own avatar/background image
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 130%;
-    filter: grayscale(100%) brightness(0.95) drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
-    opacity: 0.65;
-    pointer-events: none;
-    position: relative;
-
-    // 全息扫描线叠加
-    &::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: repeating-linear-gradient(
-        to bottom,
-        transparent,
-        transparent 3px,
-        rgba(178, 242, 187, 0.03) 3px,
-        rgba(178, 242, 187, 0.03) 4px
-      );
-      animation: mobileScanlineScroll 4s linear infinite;
-      pointer-events: none;
-    }
-  }
-
   .mobilePanelBottomRow {
     display: flex;
     justify-content: space-between;
@@ -1169,18 +1139,5 @@
       &::after { border-color: var(--ark-highlight-green); }
     }
 
-    .mobilePanelLogo {
-      filter: grayscale(80%) brightness(0.35) hue-rotate(300deg);
-
-      &::after {
-        background: repeating-linear-gradient(
-          to bottom,
-          transparent,
-          transparent 3px,
-          rgba(224, 143, 255, 0.04) 3px,
-          rgba(224, 143, 255, 0.04) 4px
-        );
-      }
-    }
   }
 }

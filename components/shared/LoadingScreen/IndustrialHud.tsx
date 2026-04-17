@@ -61,7 +61,7 @@ const IndustrialHud = forwardRef<IndustrialHudRef>((_, ref) => {
               ))}
             </div>
           </div>
-          <span className={styles.scale_label_v}>ALT</span>
+          <span className={styles.scale_label_v}>档位</span>
         </div>
 
         <div className={styles.hud_scale_right}>
@@ -73,7 +73,7 @@ const IndustrialHud = forwardRef<IndustrialHudRef>((_, ref) => {
               ))}
             </div>
           </div>
-          <span className={styles.scale_label_v}>SPD</span>
+          <span className={styles.scale_label_v}>脉冲</span>
         </div>
       </div>
 
@@ -81,12 +81,12 @@ const IndustrialHud = forwardRef<IndustrialHudRef>((_, ref) => {
       <div ref={hudElementsRef} className={styles.hud_elements}>
         <div className={`${styles.hud_element} ${styles.top_left}`}>
           <div className={styles.hud_line}></div>
-          <div className={styles.hud_text}>STATUS MONITOR</div>
+          <div className={styles.hud_text}>卷宗监测</div>
         </div>
         <div className={`${styles.hud_element} ${styles.top_right}`}>
           <div className={styles.hud_line}></div>
           <div className={styles.hud_text_with_signal}>
-            <div className={styles.hud_text}>BIO-SIGNAL DETECTED</div>
+            <div className={styles.hud_text}>监护签名已识别</div>
             <div className={styles.signal_ekg}>
               <svg viewBox="0 0 100 30" preserveAspectRatio="none">
                 <polyline points="0,15 20,15 25,5 30,25 35,15 50,15 55,5 65,28 75,15 100,15" className={styles.ekg_line} />
@@ -96,7 +96,7 @@ const IndustrialHud = forwardRef<IndustrialHudRef>((_, ref) => {
         </div>
         <div className={`${styles.hud_element} ${styles.bottom_left}`}>
           <div className={styles.hud_line}></div>
-          <div className={styles.hud_text}>ID-1A1A1A</div>
+          <div className={styles.hud_text}>FILE-KL-01</div>
         </div>
         <div className={`${styles.hud_element} ${styles.bottom_right}`}>
           <div className={styles.hud_line}></div>

@@ -26,7 +26,7 @@ const TerminalConsole = forwardRef<TerminalConsoleRef, TerminalConsoleProps>(({ 
   return (
     <div ref={containerRef} className={styles.console_output} style={{ opacity: 0 }}>
       <div className={styles.console_header}>
-        <span className={styles.header_title}>SYSTEM LOG</span>
+        <span className={styles.header_title}>卷宗日志</span>
       </div>
       <div className={styles.console_content} ref={contentRef}>
         {logLines.map(line => (

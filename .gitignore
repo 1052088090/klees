@@ -54,3 +54,13 @@ deploy.log
 
 # Nested repo artifacts
 rainmorime-template/
+
+# Generated feeds (regenerated every build)
+public/rss.xml
+public/sitemap.xml
+
+# Local logs
+.codex-server.*.log
+
+# Claude Code local settings
+.claude/

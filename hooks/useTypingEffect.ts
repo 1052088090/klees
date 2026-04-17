@@ -10,8 +10,8 @@ export function useFateTypingEffect(textVisible: boolean): FateTypingState {
 
   useEffect(() => {
     if (textVisible) {
-      const englishText = "Replace This With Your Own Tagline";
-      const chineseText = "Write Your Own Tagline Here";
+      const englishText = "Klee File / Restricted Archive";
+      const chineseText = "西风骑士团火花骑士机密档案";
       const typingDelay = 80;
       const deleteDelay = 50;
       const chineseTypingDelay = 150;
@@ -133,17 +133,17 @@ export function useEnvParamsTypingEffect(textVisible: boolean): EnvParamsTypingS
         const rad = Math.floor(200 + Math.random() * 300);
         const o2 = (8 + Math.random() * 2).toFixed(1);
 
-        const pollutionLevels = ["SEVERE", "CRITICAL", "UNSTABLE", "HAZARDOUS"];
+        const pollutionLevels = ["高危", "警戒", "封存", "待命"];
         const pollution = pollutionLevels[Math.floor(Math.random() * pollutionLevels.length)];
 
-        const rainStatus = ["IMMINENT", "LIKELY", "UNLIKELY", "CERTAIN"];
+        const rainStatus = ["必须陪同", "建议陪同", "待批注", "已签核"];
         const rain = rainStatus[Math.floor(Math.random() * rainStatus.length)];
 
         const warnings = [
-          "ALERT: TOXIC EXPOSURE RISK",
-          "CAUTION: RADIATION STORM",
-          "DANGER: ACID ZONES EXPANDING",
-          "URGENT: OXYGEN DEPLETION"
+          "附注: 蹦蹦炸弹库存活跃",
+          "警示: 单独远行申请驳回",
+          "警戒: 爆破范围仍在复核",
+          "通告: 需监护人签名陪同"
         ];
         const randomWarning = warnings[Math.floor(Math.random() * warnings.length)];
         const warningLine = Math.random() > 0.5 ? `\n${randomWarning}` : '';
@@ -151,7 +151,7 @@ export function useEnvParamsTypingEffect(textVisible: boolean): EnvParamsTypingS
         setEnvData({ temp: newTemp, rad, o2: parseFloat(o2), pollution, acidRain: rain });
         setEnvDataVersion(prev => prev + 1);
 
-        return `TEMP: ${tempStr}°C\nRAD: ${rad}mSv/h\nO2: ${o2}%\nPOLLUTION: ${pollution}\nACID RAIN: ${rain}${warningLine}`;
+        return `火花指数: ${tempStr}\n爆破风险: ${rad}\n陪同等级: ${o2}\n卷宗状态: ${pollution}\n签核记录: ${rain}${warningLine}`;
       };
 
       const generateAndType = () => {

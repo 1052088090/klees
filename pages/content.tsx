@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import type { GetStaticProps } from 'next';
 import styles from '../styles/Home.module.scss';
-import { useApp } from '../contexts/AppContext';
 import { useTransition } from '../contexts/TransitionContext';
 
 import WorksSection from '../components/sections/WorksSection';
@@ -39,7 +38,6 @@ interface ContentPageProps {
 
 export default function ContentPage({ blogPosts }: ContentPageProps) {
   const router = useRouter();
-  const { runtime, totalVisits, currentVisitors } = useApp();
   const { navigateTo, setBackOverride } = useTransition();
 
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -104,7 +102,6 @@ export default function ContentPage({ blogPosts }: ContentPageProps) {
   useEffect(() => {
     const allLifeItems = [...gameData, ...travelData, ...otherData];
     allLifeItems.forEach(item => { router.prefetch(`/life/${item.id}`); });
-    gameProjects.forEach(p => { router.prefetch(`/game/${p.id}`); });
     webProjects.forEach(p => { router.prefetch(`/web/${p.id}`); });
     blogPosts.forEach(p => { router.prefetch(`/blog/${p.slug}`); });
   }, [router, blogPosts]);
@@ -135,11 +132,8 @@ export default function ContentPage({ blogPosts }: ContentPageProps) {
       const img = new Image();
       img.src = coverImg;
     }
-    const isGame = gameProjects.some((p) => p.id === item.id);
     const isWeb = webProjects.some((p) => p.id === item.id);
-    if (isGame) {
-      navigateTo(`/game/${item.id}`);
-    } else if (isWeb) {
+    if (isWeb) {
       navigateTo(`/web/${item.id}`);
     } else {
       openDetail({ type: 'work', item });
@@ -167,7 +161,7 @@ export default function ContentPage({ blogPosts }: ContentPageProps) {
 
   // --- Contact handlers ---
   const handleCopyEmail = useCallback(() => {
-    navigator.clipboard.writeText('your-email@example.com').then(() => {
+    navigator.clipboard.writeText('陪同批注：可莉外出时需由可信赖骑士陪同，严禁单独携带批量蹦蹦炸弹。').then(() => {
       setIsEmailCopied(true);
       setTimeout(() => setIsEmailCopied(false), 1500);
     }).catch(err => console.error('Failed to copy email:', err));
@@ -211,18 +205,18 @@ export default function ContentPage({ blogPosts }: ContentPageProps) {
 
   const detailTitle = isDetailOpen
     ? detail.type === 'work'
-      ? `${detail.item.title} - WORKS`
+      ? `${detail.item.title} - 基础档案`
       : detail.type === 'experience'
-        ? `${(detail.item as any).title || (detail.item as any).company} - EXPERIENCE`
-        : `${detail.item.title} - LIFE`
-    : 'My Portfolio';
+        ? `${(detail.item as any).title || (detail.item as any).company} - 作战天赋`
+        : `${detail.item.title} - 图像档案`
+    : '可莉档案袋';
 
   return (
     <>
       <Head>
         <title>{detailTitle}</title>
         {!isDetailOpen && (
-          <meta name="description" content="Portfolio — Explore" />
+          <meta name="description" content="西风骑士团火花骑士档案总览" />
         )}
       </Head>
 
@@ -298,9 +292,6 @@ export default function ContentPage({ blogPosts }: ContentPageProps) {
           <AboutSection
             aboutSectionRef={aboutSectionRef}
             aboutContentRef={aboutContentRef}
-            runtime={runtime}
-            totalVisits={totalVisits}
-            currentVisitors={currentVisitors}
           />
         </div>
       </div>

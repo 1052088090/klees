@@ -142,12 +142,12 @@ const HomeLoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
         <div ref={progressAreaRef} className={styles.progress_area} style={{ opacity: 0, transform: 'translateY(15px)' }}>
           <div className={styles.text_progress_container}>
             <div className={styles.text_progress_base}>
-              <span className={styles.progress_prefix}>&gt; SYSTEM INITIALIZING... [</span>
+              <span className={styles.progress_prefix}>&gt; 卷宗解封中... [</span>
               <span className={styles.progress_bar_chars}>{"/".repeat(300)}</span>
               <span className={styles.progress_suffix}>] {Math.floor(progress).toString().padStart(3, ' ')}%</span>
             </div>
             <div className={styles.text_progress_fill} style={{ clipPath: `inset(0 ${100 - progress}% 0 0)` }}>
-              <span className={styles.progress_prefix}>&gt; SYSTEM INITIALIZING... [</span>
+              <span className={styles.progress_prefix}>&gt; 卷宗解封中... [</span>
               <span className={styles.progress_bar_chars}>{"/".repeat(300)}</span>
               <span className={styles.progress_suffix}>] {Math.floor(progress).toString().padStart(3, ' ')}%</span>
             </div>

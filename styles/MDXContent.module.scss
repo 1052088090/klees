@@ -246,6 +246,15 @@
     background: rgba(230, 230, 230, 0.18);
     margin-top: 2em;
   }
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 }
 
 .aside {
@@ -356,6 +365,83 @@
   }
 }
 
+.logBlock {
+  margin: 0 0 1.6em;
+  padding: 18px 20px 16px;
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.14);
+  background:
+    linear-gradient(180deg, rgba(var(--ark-primary-rgb), 0.06), rgba(var(--ark-primary-rgb), 0.01)),
+    rgba(255, 255, 255, 0.01);
+}
+
+.logBlockLabel {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(var(--ark-primary-rgb), 0.84);
+}
+
+.logBlockBody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.voiceLine {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 10px 0;
+  border-top: 1px solid rgba(var(--ark-border-rgb), 0.08);
+
+  &:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+}
+
+.voiceSpeaker {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(var(--ark-primary-rgb), 0.76);
+}
+
+.voiceText {
+  font-family: var(--font-reading);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  color: rgba(255, 235, 210, 0.86);
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.16);
+  background: rgba(var(--ark-primary-rgb), 0.07);
+  font-family: var(--font-mono);
+  font-size: 0.78em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(var(--ark-primary-rgb), 0.86);
+  vertical-align: middle;
+}
+
 // ===== Inverted mode =====
 
 :global(.inverted) {
@@ -430,6 +516,11 @@
   .ol li::before {
     color: rgba(var(--ark-primary-rgb), 0.5);
   }
+
+  .logBlock {
+    border-color: rgba(var(--ark-primary-rgb), 0.16);
+    background: rgba(var(--ark-primary-rgb), 0.04);
+  }
 }
 
 // ===== Responsive =====
@@ -469,5 +560,14 @@
   .codeBlock {
     padding: 14px 16px;
     font-size: var(--fs-md);
+  }
+
+  .logBlock {
+    padding: 14px 14px 12px;
+  }
+
+  .voiceLine {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 }

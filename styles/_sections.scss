@@ -150,6 +150,28 @@
   }
 }
 
+.sectionLead {
+  width: min(100%, 720px);
+  margin: -6px 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sectionCode {
+  color: var(--ark-primary);
+  opacity: 0.82;
+}
+
+.sectionSummary {
+  margin: 0;
+  font-family: var(--font-reading);
+  font-size: var(--fs-base);
+  line-height: 1.85;
+  color: var(--ark-text-secondary);
+  max-width: 640px;
+}
+
 // (contentWrapper 已合并到上方)
 
 // --- 新增: 调整最后一个区域 (ABOUT) 的样式 ---
@@ -684,6 +706,20 @@
   }
 }
 
+.timelineTopline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  .timelineItemLeft & {
+    justify-content: flex-end;
+  }
+
+  .timelineItemRight & {
+    justify-content: flex-start;
+  }
+}
+
 // --- 卡片内部: Details 组 (详情) ---
 .timelineDetails {
   display: flex;
@@ -715,6 +751,96 @@
     align-self: flex-end;
     align-items: flex-end;
     text-align: right;
+  }
+}
+
+.timelineCategory {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.14);
+  background: rgba(var(--ark-primary-rgb), 0.06);
+  font-family: var(--font-hud);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 234, 210, 0.84);
+
+  .timelineItem:not(.educationItem) & {
+    font-size: 10px;
+    padding: 2px 7px;
+  }
+}
+
+.timelineSummary {
+  margin: 0;
+  font-family: var(--font-reading);
+  font-size: var(--fs-sm);
+  line-height: 1.8;
+  color: rgba(255, 225, 197, 0.84);
+
+  .timelineItem:not(.educationItem) & {
+    font-size: var(--fs-xs);
+  }
+
+  .timelineItemLeft & {
+    text-align: left;
+  }
+
+  .timelineItemRight & {
+    text-align: right;
+  }
+}
+
+.timelineLocation {
+  font-family: var(--font-mono) !important;
+  font-size: var(--fs-2xs) !important;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 202, 154, 0.74) !important;
+}
+
+.timelineObservation {
+  color: rgba(255, 225, 197, 0.76) !important;
+}
+
+.timelineKeywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  .timelineItemLeft & {
+    justify-content: flex-start;
+  }
+
+  .timelineItemRight & {
+    justify-content: flex-end;
+  }
+}
+
+.timelineKeyword {
+  padding: 4px 8px;
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.12);
+  background: rgba(var(--ark-primary-rgb), 0.05);
+  font-family: var(--font-hud);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.08em;
+  color: rgba(255, 233, 207, 0.82);
+}
+
+.timelineInspect {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 202, 154, 0.74);
+
+  .timelineItemLeft & {
+    align-self: flex-start;
+  }
+
+  .timelineItemRight & {
+    align-self: flex-end;
   }
 }
 
@@ -1487,6 +1613,168 @@
   pointer-events: auto; // ADD back
 }
 
+.identityPanel {
+  margin-bottom: 24px;
+  padding: 18px 18px 20px;
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.16);
+  background:
+    linear-gradient(180deg, rgba(34, 21, 16, 0.72), rgba(17, 11, 9, 0.84)),
+    radial-gradient(circle at top right, rgba(var(--ark-primary-rgb), 0.12), transparent 30%);
+}
+
+.identityPanelHeader {
+  width: min(100%, 760px);
+  margin-bottom: 16px;
+}
+
+.identityKicker,
+.identityMetaLabel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.identityKicker {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: rgba(255, 202, 154, 0.8);
+}
+
+.identitySummary {
+  margin: 0;
+  font-family: var(--font-reading);
+  font-size: var(--fs-sm);
+  line-height: 1.9;
+  color: rgba(255, 225, 197, 0.8);
+}
+
+.identityMetaRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.identityMetaCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(var(--ark-primary-rgb), 0.14);
+}
+
+.identityMetaLabel {
+  color: rgba(255, 202, 154, 0.72);
+}
+
+.identityMetaValue {
+  font-family: var(--font-hud);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: rgba(255, 239, 214, 0.92);
+}
+
+.constellationPanel {
+  margin-bottom: 24px;
+  padding: 18px 18px 20px;
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.16);
+  background:
+    linear-gradient(180deg, rgba(34, 21, 16, 0.7), rgba(17, 11, 9, 0.82)),
+    radial-gradient(circle at top right, rgba(var(--ark-primary-rgb), 0.12), transparent 32%);
+}
+
+.constellationPanelHeader {
+  width: min(100%, 760px);
+  margin-bottom: 16px;
+}
+
+.constellationKicker,
+.constellationNodeCode {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.constellationKicker {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: rgba(255, 202, 154, 0.8);
+}
+
+.constellationSummary {
+  margin: 0;
+  font-family: var(--font-reading);
+  font-size: var(--fs-sm);
+  line-height: 1.9;
+  color: rgba(255, 225, 197, 0.8);
+}
+
+.constellationRail {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 10px;
+    right: 10px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(var(--ark-primary-rgb), 0.18), rgba(var(--ark-primary-rgb), 0.45), rgba(var(--ark-primary-rgb), 0.18));
+    pointer-events: none;
+  }
+}
+
+.constellationNode {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 132px;
+  padding: 14px 12px 12px;
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.14);
+  background: rgba(var(--ark-primary-rgb), 0.05);
+  text-align: left;
+  cursor: none;
+  transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+
+  &::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--ark-primary);
+    box-shadow: 0 0 0 5px rgba(var(--ark-primary-rgb), 0.08);
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: rgba(var(--ark-primary-rgb), 0.36);
+    background: rgba(var(--ark-primary-rgb), 0.1);
+  }
+}
+
+.constellationNodeCode {
+  color: rgba(255, 202, 154, 0.82);
+}
+
+.constellationNodeTitle {
+  font-family: var(--font-hud);
+  font-size: var(--fs-base);
+  line-height: 1.5;
+  color: rgba(255, 239, 214, 0.94);
+}
+
+.constellationNodeHint {
+  font-family: var(--font-reading);
+  font-size: var(--fs-caption);
+  line-height: 1.6;
+  color: rgba(255, 225, 197, 0.72);
+}
+
 .workGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); 
@@ -1498,6 +1786,67 @@
   margin-top: 40px;
   border-top: 1px solid var(--ark-border);
   padding-top: 20px;
+}
+
+.appendixPanel {
+  margin-bottom: 18px;
+  padding: 18px 18px 20px;
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.16);
+  background:
+    linear-gradient(180deg, rgba(34, 21, 16, 0.68), rgba(17, 11, 9, 0.82)),
+    radial-gradient(circle at top right, rgba(var(--ark-primary-rgb), 0.1), transparent 32%);
+}
+
+.appendixPanelHeader {
+  width: min(100%, 760px);
+  margin-bottom: 16px;
+}
+
+.appendixKicker,
+.appendixMetaLabel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.appendixKicker {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: rgba(255, 202, 154, 0.8);
+}
+
+.appendixSummary {
+  margin: 0;
+  font-family: var(--font-reading);
+  font-size: var(--fs-sm);
+  line-height: 1.9;
+  color: rgba(255, 225, 197, 0.8);
+}
+
+.appendixMetaRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.appendixMetaCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(var(--ark-primary-rgb), 0.14);
+}
+
+.appendixMetaLabel {
+  color: rgba(255, 202, 154, 0.72);
+}
+
+.appendixMetaValue {
+  font-family: var(--font-hud);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: rgba(255, 239, 214, 0.92);
 }
 
 .earlySectionToggle {
@@ -1871,6 +2220,156 @@
   margin: 0 0 10px 0;
 }
 
+.lifeArchiveBoard {
+  width: min(100%, 1080px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.lifeArchiveIntro {
+  padding: 18px 20px;
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.16);
+  background:
+    linear-gradient(180deg, rgba(34, 21, 16, 0.72), rgba(17, 11, 9, 0.84)),
+    rgba(255, 238, 214, 0.03);
+}
+
+.lifeArchiveCode,
+.lifeArchiveCardCode {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.lifeArchiveCode {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: rgba(255, 202, 154, 0.82);
+}
+
+.lifeArchiveSummary {
+  margin: 0;
+  max-width: 760px;
+  font-family: var(--font-reading);
+  font-size: var(--fs-base);
+  line-height: 1.85;
+  color: rgba(255, 226, 196, 0.82);
+}
+
+.lifeArchiveGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: 14px;
+}
+
+.lifeArchiveCard {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.16);
+  background:
+    linear-gradient(180deg, rgba(34, 21, 16, 0.72), rgba(17, 11, 9, 0.84)),
+    rgba(255, 238, 214, 0.03);
+  box-shadow:
+    0 16px 32px rgba(0, 0, 0, 0.16),
+    inset 0 0 0 1px rgba(255, 218, 170, 0.03);
+}
+
+.lifeArchiveCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.lifeArchiveCardCode {
+  color: rgba(255, 202, 154, 0.82);
+}
+
+.lifeArchiveCardStatus {
+  padding: 5px 8px;
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.14);
+  background: rgba(var(--ark-primary-rgb), 0.08);
+  font-family: var(--font-hud);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.12em;
+  color: rgba(255, 236, 215, 0.86);
+  text-transform: uppercase;
+}
+
+.lifeArchiveThumb {
+  position: relative;
+  min-height: 180px;
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.14);
+  background:
+    linear-gradient(135deg, rgba(var(--ark-primary-rgb), 0.16), rgba(255, 244, 226, 0.02)),
+    radial-gradient(circle at top right, rgba(255, 233, 207, 0.18), transparent 34%),
+    linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.12) 50%);
+  background-size: auto, auto, 100% 4px;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 14px;
+    border: 1px solid rgba(var(--ark-primary-rgb), 0.1);
+  }
+}
+
+.lifeArchiveThumbLabel {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  max-width: calc(100% - 28px);
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 1vw + 1rem, 1.8rem);
+  line-height: 1.1;
+  letter-spacing: 0.08em;
+  color: rgba(255, 239, 214, 0.92);
+  text-transform: uppercase;
+}
+
+.lifeArchiveBody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lifeArchiveTitle {
+  margin: 0;
+  font-family: var(--font-hud);
+  font-size: var(--fs-lg);
+  color: var(--ark-primary);
+  letter-spacing: 0.08em;
+}
+
+.lifeArchiveText {
+  margin: 0;
+  font-family: var(--font-reading);
+  font-size: var(--fs-sm);
+  line-height: 1.85;
+  color: rgba(255, 221, 190, 0.74);
+}
+
+.lifeArchiveTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lifeArchiveTag {
+  padding: 5px 8px;
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.14);
+  background: rgba(var(--ark-primary-rgb), 0.06);
+  font-family: var(--font-hud);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.08em;
+  color: rgba(255, 232, 205, 0.84);
+}
+
 // 添加版权超链接样式
 .licenseLink {
   display: inline-block;
@@ -1948,78 +2447,11 @@
   opacity: 0.6;      
 }
 
-.worksTitleWithBackground {
-  position: relative; // 为伪元素定位提供上下文
-  z-index: 1; // 确保标题文本在伪元素之上（如果需要更明确的层级控制）
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: -60%; 
-    left: 18%; 
-    width: 320px;  
-    height: 320px; 
-    transform: translate(-50%, -50%); 
-    background-image: none; // Replace with your own character image
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain; 
-    opacity: 0.3; 
-    z-index: -10;  
-    filter: grayscale(100%) brightness(1.2); 
-    pointer-events: none;
-  }
-}
-
-// 新增: Experience 区块标题背景图片样式
-.experienceTitleWithBackground {
-  position: relative; // 为伪元素定位提供上下文
-  z-index: 1; // 确保标题文本在伪元素之上
-  overflow: visible; // 防止伪元素被裁切
-
-  &::before {
-    content: '';
-    position: absolute;
-    // 参考 .worksTitleWithBackground::before 的样式进行调整
-    top: 10%; 
-    left: 18%; 
-    width: 420px; 
-    height: 420px; 
-    transform: translate(-50%, -50%);
-    background-image: none; // Replace with your own character image
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    opacity: 0.8; 
-    z-index: -10; 
-    filter: grayscale(100%) brightness(1.2);
-    pointer-events: none;
-  }
-}
-
-// Life 区块标题背景图片样式
+.worksTitleWithBackground,
+.experienceTitleWithBackground,
 .lifeTitleWithBackground {
   position: relative;
   z-index: 1;
-  overflow: visible; // 防止伪元素被裁切
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: -40%;
-    left: 18%;
-    width: 360px;
-    height: 360px;
-    transform: translate(-50%, -50%);
-    background-image: none; // Replace with your own character image
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    opacity: 0.4;
-    z-index: -10;
-    filter: grayscale(100%) brightness(1.2);
-    pointer-events: none;
-  }
 }
 
 /* 新增: Experience 区块末尾的背景图片样式 */
@@ -2081,41 +2513,104 @@
     font-family: var(--font-display);
     font-size: clamp(2rem, 2.5vw + 1rem, 3.5rem);
     font-weight: 300;
-    color: var(--ark-primary);
-    margin-bottom: clamp(20px, 3vw, 40px);
+    color: rgba(255, 239, 214, 0.96);
+    margin-bottom: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    border-bottom: 1px solid var(--ark-border);
-    padding-bottom: 10px;
     text-align: left;
     width: 100%;
     box-sizing: border-box;
   }
 }
 
+.friendLinkHeader {
+  width: min(100%, 980px);
+  margin-bottom: clamp(22px, 3vw, 34px);
+  padding: 24px 24px 20px;
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.18);
+  background:
+    linear-gradient(180deg, rgba(34, 21, 16, 0.84), rgba(18, 12, 9, 0.92)),
+    radial-gradient(circle at top right, rgba(var(--ark-primary-rgb), 0.16), transparent 34%);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.22),
+    inset 0 0 0 1px rgba(255, 218, 170, 0.04);
+}
+
+.friendLinkKicker,
+.friendLinkMetaLabel,
+.friendLinkCode,
+.friendLinkRelationLabel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.friendLinkKicker {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: rgba(255, 202, 154, 0.8);
+}
+
+.friendLinkSummary {
+  width: min(100%, 720px);
+  margin: 0 0 20px;
+  font-family: var(--font-reading);
+  font-size: var(--fs-base);
+  line-height: 1.9;
+  color: rgba(255, 226, 196, 0.82);
+}
+
+.friendLinkMetaRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.friendLinkMetaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(var(--ark-primary-rgb), 0.14);
+}
+
+.friendLinkMetaLabel {
+  color: rgba(255, 202, 154, 0.74);
+}
+
+.friendLinkMetaValue {
+  font-family: var(--font-hud);
+  font-size: var(--fs-base);
+  line-height: 1.5;
+  color: rgba(255, 239, 214, 0.92);
+}
+
 .friendLinkGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
-  gap: clamp(12px, 2vw, 20px);
+  width: min(100%, 1120px);
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: clamp(14px, 2vw, 24px);
 }
 
 .friendLinkCard {
-  background-color: rgba(var(--ark-secondary-rgb), 0.1);
-  border: 1px solid var(--ark-border);
-  padding: 15px; // Reduced padding
+  padding: 18px 18px 16px;
   display: flex;
-  align-items: center;
-  gap: 15px;
-  text-decoration: none;
+  flex-direction: column;
+  gap: 14px;
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.16);
+  background:
+    linear-gradient(180deg, rgba(34, 21, 16, 0.72), rgba(17, 11, 9, 0.84)),
+    rgba(255, 238, 214, 0.03);
   color: var(--ark-primary);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   position: relative;
   overflow: hidden;
 
   &:hover {
-    background-color: rgba(var(--ark-secondary-rgb), 0.2);
-    border-color: var(--ark-primary);
-    transform: translateY(-5px);
+    border-color: rgba(var(--ark-primary-rgb), 0.38);
+    transform: translateY(-4px);
+    box-shadow: 0 22px 38px rgba(0, 0, 0, 0.22);
   }
 
   /* Inverted Mode Styles */
@@ -2129,12 +2624,43 @@
   }
 }
 
+.friendLinkCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+.friendLinkCode {
+  color: rgba(255, 202, 154, 0.84);
+}
+
+.friendLinkStatus {
+  padding: 6px 8px;
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.18);
+  background: rgba(var(--ark-primary-rgb), 0.08);
+  font-family: var(--font-hud);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.12em;
+  color: rgba(255, 236, 215, 0.88);
+}
+
+.friendLinkCardBody {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
 .friendLinkAvatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 74px;
+  height: 74px;
+  border-radius: 14px;
   overflow: hidden;
   flex-shrink: 0; /* Prevent avatar from shrinking */
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.16);
+  background: rgba(var(--ark-primary-rgb), 0.06);
   img {
     width: 100%;
     height: 100%;
@@ -2143,11 +2669,15 @@
 }
 
 .friendLinkInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
   h3 {
-    margin: 0 0 5px;
-    font-size: var(--fs-lg); // Increased
+    margin: 0;
+    font-size: clamp(1.2rem, 1vw + 1rem, 1.6rem);
     font-weight: 600; /* Bolder font */
-    color: var(--ark-primary);
+    color: rgba(255, 239, 214, 0.96);
     transition: color 0.3s ease;
 
     .inverted & {
@@ -2156,14 +2686,77 @@
   }
   p {
     margin: 0;
-    font-size: var(--fs-xs); // Reduced
-    color: var(--ark-text-secondary);
+    font-size: var(--fs-xs);
+    line-height: 1.8;
+    color: rgba(255, 221, 190, 0.72);
     transition: color 0.3s ease;
 
     .inverted & {
       color: var(--ark-text-secondary-inverted);
     }
   }
+}
+
+.friendLinkRole {
+  font-family: var(--font-hud);
+  font-size: var(--fs-caption);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 202, 154, 0.84);
+}
+
+.friendLinkRelationRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  padding-top: 12px;
+  border-top: 1px solid rgba(var(--ark-primary-rgb), 0.12);
+}
+
+.friendLinkRelationLabel {
+  color: rgba(255, 202, 154, 0.74);
+}
+
+.friendLinkRelationValue {
+  font-family: var(--font-hud);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: rgba(255, 239, 214, 0.92);
+}
+
+.friendLinkNotes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.friendLinkNote {
+  margin: 0;
+  padding-left: 12px;
+  border-left: 1px solid rgba(var(--ark-primary-rgb), 0.18);
+  font-family: var(--font-reading);
+  font-size: var(--fs-caption);
+  line-height: 1.8;
+  color: rgba(255, 221, 190, 0.72);
+}
+
+.friendLinkKeywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+.friendLinkKeyword {
+  padding: 5px 8px;
+  border: 1px solid rgba(var(--ark-primary-rgb), 0.14);
+  background: rgba(var(--ark-primary-rgb), 0.06);
+  font-family: var(--font-hud);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.08em;
+  color: rgba(255, 232, 205, 0.84);
 }
 
 // Add arrow bar styles
@@ -2284,10 +2877,32 @@
 
 // ===== 响应式: 平板/移动端 (<1024px) =====
 @media (max-width: 1023px) {
+  .sectionLead {
+    margin-bottom: 20px;
+  }
+
+  .worksTitleWithBackground::before,
+  .experienceTitleWithBackground::before,
+  .lifeTitleWithBackground::before {
+    width: 260px;
+    height: 260px;
+    left: 26%;
+  }
+
   .contentSection {
     width: 100%;
     margin-left: 0;
     padding: var(--spacing-section-top) 20px 40px 20px;
+  }
+
+  .lifeArchiveGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .appendixMetaRow,
+  .identityMetaRow,
+  .constellationRail {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .aboutSection {
@@ -2389,6 +3004,26 @@
 
 // ===== 响应式: 移动端 (<768px) =====
 @media (max-width: 767px) {
+  .sectionLead {
+    margin-top: 2px;
+    gap: 6px;
+  }
+
+  .sectionSummary {
+    font-size: var(--fs-sm);
+    line-height: 1.8;
+  }
+
+  .worksTitleWithBackground::before,
+  .experienceTitleWithBackground::before,
+  .lifeTitleWithBackground::before {
+    width: 190px;
+    height: 190px;
+    left: 18%;
+    top: -22%;
+    opacity: 0.1;
+  }
+
   .contentSection {
     padding: var(--spacing-section-top) 16px 30px 16px;
     min-height: auto;
@@ -2397,6 +3032,60 @@
     &:last-child {
       padding-bottom: calc(56px + 30px + env(safe-area-inset-bottom, 0px));
     }
+  }
+
+  .lifeArchiveIntro,
+  .lifeArchiveCard {
+    padding: 14px;
+  }
+
+  .lifeArchiveThumb {
+    min-height: 150px;
+  }
+
+  .lifeArchiveThumbLabel {
+    font-size: 1.1rem;
+  }
+
+  .lifeArchiveSummary,
+  .lifeArchiveText {
+    font-size: var(--fs-xs);
+  }
+
+  .constellationPanel {
+    padding: 16px 14px 18px;
+  }
+
+  .appendixPanel {
+    padding: 16px 14px 18px;
+  }
+
+  .identityPanel {
+    padding: 16px 14px 18px;
+  }
+
+  .appendixMetaRow,
+  .identityMetaRow,
+  .constellationRail {
+    grid-template-columns: 1fr;
+  }
+
+  .constellationNode {
+    min-height: 116px;
+    padding: 12px 10px 10px;
+  }
+
+  .constellationNodeTitle {
+    font-size: var(--fs-sm);
+  }
+
+  .constellationNodeHint,
+  .constellationSummary,
+  .appendixSummary,
+  .appendixMetaValue,
+  .identitySummary,
+  .identityMetaValue {
+    font-size: var(--fs-2xs);
   }
 
   .contactSection {
@@ -2421,6 +3110,27 @@
     width: 100%;
     margin-left: 0;
     padding: 20px 16px 80px 16px;
+  }
+
+  .friendLinkHeader {
+    padding: 18px 16px 16px;
+  }
+
+  .friendLinkMetaRow {
+    grid-template-columns: 1fr;
+  }
+
+  .friendLinkCard {
+    padding: 16px 14px 14px;
+  }
+
+  .friendLinkCardBody {
+    align-items: flex-start;
+  }
+
+  .friendLinkAvatar {
+    width: 60px;
+    height: 60px;
   }
 
   // 移动端时间线优化
@@ -2484,9 +3194,14 @@
   }
 
   .timelineItemLeft .timelineDetails,
-  .timelineItemRight .timelineDetails {
+  .timelineItemRight .timelineDetails,
+  .timelineItemLeft .timelineKeywords,
+  .timelineItemRight .timelineKeywords,
+  .timelineItemLeft .timelineTopline,
+  .timelineItemRight .timelineTopline {
     align-self: flex-start !important;
     align-items: flex-start !important;
+    justify-content: flex-start !important;
     text-align: left !important;
   }
 
@@ -2500,6 +3215,11 @@
 
   .timelineDetails p {
     font-size: var(--fs-body) !important;
+  }
+
+  .timelineSummary {
+    font-size: var(--fs-body) !important;
+    text-align: left !important;
   }
 
   .timelineItem:not(.educationItem) .timelineContent p {

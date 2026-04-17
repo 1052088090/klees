@@ -39,7 +39,7 @@ const ProjectCard = ({ project, onClick }) => {
         {isConfidential && !resolvedImageUrl ? (
           <div className={`${styles.projectImagePlaceholder} ${styles.confidentialPlaceholder}`}>
             <span className={styles.confidentialIcon}>🔒</span>
-            <span className={styles.confidentialLabel}>CONFIDENTIAL</span>
+            <span className={styles.confidentialLabel}>封存卷宗</span>
           </div>
         ) : (
           <div className={styles.projectImagePlaceholder} style={imageStyle}>
@@ -74,7 +74,7 @@ const ProjectCard = ({ project, onClick }) => {
           onClick={(e) => e.stopPropagation()}
           data-cursor-magnetic
         >
-          Visit
+          解封
         </a>
       )}
       {!liveUrl && !onClick && link && link !== '#' && (
@@ -86,7 +86,7 @@ const ProjectCard = ({ project, onClick }) => {
           onClick={(e) => e.stopPropagation()}
           data-cursor-magnetic
         >
-          Visit
+          解封
         </a>
       )}
     </div>

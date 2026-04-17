@@ -105,7 +105,7 @@ const LifeDetailView = ({ item }) => {
       <div className={styles.detailContent}>
           <div className={styles.detailImageContainer}>
               <div className={styles.detailImage} style={imageStyle}>
-                 {!imageUrl && <span>Image not available</span>} {/* 无主图时显示占位文本 */}
+                 {!imageUrl && <span>暂无图像</span>} {/* 无主图时显示占位文本 */}
                  <div className={styles.imageScanlineOverlay}></div> {/* 图片扫描线覆盖层 */}
               </div>
           </div>
@@ -224,7 +224,7 @@ const LifeDetailView = ({ item }) => {
               {/* 相关图片缩略图展示区域 */}
               {imagesForGallery.length > 0 && (
                 <div className={styles.relatedImagesSection}>
-                  <h4 className={styles.relatedImagesTitle}>Gallery</h4>
+                  <h4 className={styles.relatedImagesTitle}>相关图像</h4>
                   <div className={styles.thumbnailGrid}>
                     {imagesForGallery.map((img, idx) => ( // Changed index to idx to avoid conflict
                       <button 
@@ -248,7 +248,7 @@ const LifeDetailView = ({ item }) => {
               {/* 技术标签展示区域 */}
               {tech && tech.length > 0 && (
                   <div className={styles.detailTechContainer}>
-                       <span className={styles.techLabel}>Tags:</span> 
+                       <span className={styles.techLabel}>标签:</span> 
                        <div className={styles.detailTechTags}> 
                            {tech.map((tag, index) => (
                                <span key={index} className={styles.detailTechTag}>{tag}</span>

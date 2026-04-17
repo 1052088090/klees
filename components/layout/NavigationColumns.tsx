@@ -5,7 +5,7 @@ import VerticalShinyText from '../shared/VerticalShinyText';
 import ActivationLever from '../interactive/ActivationLever';
 import { useApp } from '../../contexts/AppContext';
 
-const sectionNames = ["PORTFOLIO", "EXPERIENCE", "BLOG", "LIFE", "CONTACT", "ABOUT"];
+const sectionNames = ["基础档案", "作战天赋", "故事记录", "图像档案", "附录备注", "终页摘要"];
 
 export default function NavigationColumns({
   activeSection,
@@ -111,12 +111,9 @@ export default function NavigationColumns({
             </div>
           </div>
 
-          {/* RM Logo — 弹性填充中央区域 */}
-          <div className={styles.mobilePanelLogo} />
-
           {/* 底部行: 盲文(左) + 命运文字(右) */}
           <div className={styles.mobilePanelBottomRow}>
-            <div className={styles.mobilePanelBraille}>⠝⠊⠕⠍⠡⠸⠬⠉⠄⠅⠢⠛⠳</div>
+                  <div className={styles.mobilePanelBraille}>⠅⠇⠑⠑⠲⠋⠊⠇⠑</div>
             <div className={`${styles.mobilePanelFate} ${isFateTypingActive ? styles.mobilePanelTyping : ''}`}>
               <span className={styles.mobilePanelFateText}>{displayedFateText}</span>
             </div>
@@ -145,11 +142,11 @@ export default function NavigationColumns({
         {/* Navigation columns */}
         {sectionNames.map((name, index) => {
           const columnPercentage = index * 16;
-          const hudText = randomHudTexts[index + 1] || `DATA-Ø0${index + 1}`;
+          const hudText = randomHudTexts[index + 1] || `卷宗-0${index + 1}`;
 
           const tasks = Array.from({ length: 30 }, (_, i) => {
             const taskNumber = String(i + 1).padStart(3, '0');
-            return `TASK-${taskNumber}: Done`;
+            return `卷宗-${taskNumber}: 已就绪`;
           });
 
           return (
